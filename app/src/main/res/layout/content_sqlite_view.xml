@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sjsu.karthik.datastorageassignment.SQLiteView"
+    tools:showIn="@layout/activity_sqlite_view"
+    android:background="@color/blue">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/sjsu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/SQLiteViewTitle"
+        android:id="@+id/textView2"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="56dp"
+        android:layout_marginEnd="56dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/blogMsg_lbl"
+        android:id="@+id/textView3"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/sqlMsg"
+        android:gravity="start"
+        android:background="@color/white"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:id="@+id/saveBtn"
+        android:layout_marginTop="49dp"
+        android:onClick="saveMessage"
+        android:background="@color/white"
+        android:layout_below="@+id/sqlMsg"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:id="@+id/cancelBtn"
+        android:background="@color/white"
+        android:onClick="reset"
+        android:layout_alignTop="@+id/saveBtn"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+</RelativeLayout>
